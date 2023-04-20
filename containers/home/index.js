@@ -14,7 +14,7 @@ const HomeContainer = ({topRatedMovies = [], popularMovies = [], categories = []
         <Categories categories={categories.slice(0,5)} />
         {
           selectedCategory.movies.length > 0 && (
-            <MoviesSection title={categories.find(c => c.id === +selectedCategory.id).name} movies={selectedCategory.movies} />
+            <MoviesSection title={categories.find(c => c.id === +selectedCategory.id)?.name} movies={selectedCategory.movies} />
           )
         }
         <MoviesSection title="Popular Films" movies={topRatedMovies.slice(1,7)} />
